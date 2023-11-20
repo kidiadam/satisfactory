@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+    <meta content=article property=og:type>
+    <meta content= property=og:title>
+    <!-- <meta content=前端作品集 property=og:description> -->
+    <title>配方建造模擬</title>
+    <!-- <script src=https://code.jquery.com/jquery-3.2.1.min.js></script> -->
+    <script src=https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js></script>
+    <link href=https://cdn.jsdelivr.net/npm/vuetify@2.4.3/dist/vuetify.min.css rel=stylesheet>
+    <script src=https://cdn.jsdelivr.net/npm/vuetify@2.4.3/dist/vuetify.js></script>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/formula.js"></script>
+
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app id="inspire">
+        <h1 class="text-center my-4">
+          配方列表
+          <v-icon v-if="expand" @click="expand = !expand" style="cursor: pointer;" class="ml-2" large>mdi-minus-circle-outline</v-icon>
+          <v-icon v-else style="cursor: pointer;" @click="expand = !expand" class="ml-2" large>mdi-plus-circle-outline</v-icon>
+        </h1>
+        <div class="mySection">
+          <v-expand-transition>
+            <v-simple-table v-show="expand" fixed-header  height="300px">
+              <template v-slot:top>
+                <v-text-field
+                  v-model="search"
+                  label="搜尋特定產品配方"
+                  class="mx-4"
+                ></v-text-field>
+              </template>
+              <template v-slot:default>
+                <thead>
+                  <tr>
+                    <th class="text-left">
+                      產品
+                    </th>
+                    <th class="text-left">
+                      生產數量
+                    </th>
+                    <th class="text-left">
+                      消耗材料
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="item, idx in formula" :key="item.idx">
+                    <td>
+                      <span v-for="pro, proInd in item.product" :key="pro.name" v-text="pro.name+(proInd<pro.length-1? '、' : '')"></span>
+                    </td>
+                    <td>
+                      <span v-for="pro, proInd in item.product" :key="`${pro.name}-proInd`" v-text="pro.amount+(proInd<item.product.length-1? '、' : '')"></span>
+                    </td>
+                    <td>
+                      <span v-for="co, coInd in item.cost" :key="`${idx}-${coInd}`" v-text="co.name+co.amount+(coInd<item.cost.length-1? '、' : '')"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+          </v-expand-transition>
+        </div>
+        <h1 class="text-center my-4">
+          模擬建造
+          <v-icon style="cursor: pointer;" @click="addSection" class="ml-2" large>mdi-plus-circle-outline</v-icon>
+        </h1>
+        <div class="simulations" style="padding-bottom: 100px;">
+          <div style="margin-bottom: 60px;" class="mySection"  v-for="simulation, index in simulations" :key="index">
+            <h2>模擬建造-{{index+1}}</h2>
+            <v-simple-table fixed-header>
+              <template v-slot:default>
+                <thead>
+                  <tr>
+                    <th class="text-left">
+                      產品
+                    </th>
+                    <th class="text-left">
+                      建造數量
+                    </th>
+                    <th class="text-left">
+                      生產數量
+                    </th>
+                    <th class="text-left">
+                      消耗材料
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="row, idx in simulation" :key="`${index}-${idx}`">
+                    <td>
+                      <v-select
+                        v-model="row.select"
+                        :items="formula"
+                        item-text="name"
+                        item-value="id"
+                        label="Select"
+                        persistent-hint
+                        return-object
+                        single-line
+                      ></v-select>
+                    </td>
+                    <td>
+                      <v-text-field
+                        v-model.number="row.build"
+                        label="建造數量"
+                      ></v-text-field>
+                    </td>
+                    <td v-text="getProduct(row)"></td>
+                    <td v-text="getCost(row)"></td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+            <div class="text-center">
+              <v-icon style="cursor: pointer;" @click="addRow(simulation)" large>mdi-plus-circle-outline</v-icon>
+            </div>
+            <v-simple-table>
+              <template v-slot:default>
+                <thead>
+                  <tr>
+                    <th>總計</th>
+                    <th v-for="el, key in getsimulationResult(simulation)" :key="key" class="text-left">{{key}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr >
+                    <td>生產</td>
+                    <td v-for="el, key in getsimulationResult(simulation)" :key="`${key}-${1}`">{{el.product}}</td>
+                  </tr>
+                  <tr >
+                    <td>消耗</td>
+                    <td v-for="el, key in getsimulationResult(simulation)" :key="`${key}-${2}`">{{el.cost}}</td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+          </div>
+        </div>
+      </v-app>
+
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

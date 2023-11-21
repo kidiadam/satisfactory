@@ -37,6 +37,7 @@
                   v-model="search"
                   label="搜尋特定產品配方"
                   class="mx-4"
+                  @change="searchFormula"
                 ></v-text-field>
               </template>
               <template v-slot:default>
@@ -82,6 +83,9 @@
                 <thead>
                   <tr>
                     <th class="text-left">
+                      編輯
+                    </th>
+                    <th class="text-left">
                       產品
                     </th>
                     <th class="text-left">
@@ -97,6 +101,7 @@
                 </thead>
                 <tbody>
                   <tr v-for="row, idx in simulation" :key="`${index}-${idx}`">
+                    <td><v-icon v-if="simulation.length > 1" style="cursor: pointer;" @click="removeRow(index, idx)" large>mdi-minus-circle-outline</v-icon></td>
                     <td>
                       <v-select
                         v-model="row.select"
@@ -128,7 +133,7 @@
               <template v-slot:default>
                 <thead>
                   <tr>
-                    <th>總計</th>
+                    <th></th>
                     <th v-for="el, key in getsimulationResult(simulation)" :key="key" class="text-left">{{key}}</th>
                   </tr>
                 </thead>
@@ -140,6 +145,14 @@
                   <tr >
                     <td>消耗</td>
                     <td v-for="el, key in getsimulationResult(simulation)" :key="`${key}-${2}`">{{el.cost}}</td>
+                  </tr>
+                  <tr >
+                    <td>小記</td>
+                    <td 
+                      v-for="el, key in getsimulationResult(simulation)"
+                      :key="`${key}-${3}`"
+                      :class="{'font-weight-bold red--text': calculate(el) < 0}"
+                    >{{calculate(el)}}</td>
                   </tr>
                 </tbody>
               </template>

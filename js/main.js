@@ -47,6 +47,10 @@ const app = new Vue({
     addRow(section) {
       section.push({ select: {}, build: 1 })
     },
+    removeRow(sectionIndex,  rowIndex) {
+      this.simulations[sectionIndex].splice(rowIndex, 1)
+      // section.splice(index, 1)
+    },
     addSection() {
       this.simulations.push([
       { select: {}, build: 1 }
@@ -55,29 +59,41 @@ const app = new Vue({
     getsimulationResult(section) {
       let obj = {}
       section.forEach(sec => {
-        const { select } = sec
+        const { select, build } = sec
         const { product, cost } = select
         if (product) {
           product.forEach(pro => {
+            const amount = pro.amount * build
             if (obj[pro.name]) {
-              obj[pro.name].product += pro.amount
+              obj[pro.name].product += amount
             } else {
-              obj[pro.name] = { product: pro.amount, cost: 0 }
+              obj[pro.name] = { product: amount, cost: 0 }
             }
           })
         }
         if (cost) {
           cost.forEach(cos => {
+            const amount = cos.amount * build
             if (obj[cos.name]) {
-              obj[cos.name].cost += cos.amount
+              obj[cos.name].cost += amount
             } else {
-              obj[cos.name] = { product: 0, cost: cos.amount }
+              obj[cos.name] = { product: 0, cost: amount }
             }
           })
         }
       })
-      console.log(obj)
       return obj
+    },
+    searchFormula() {
+      const { search } = this
+      if (search) {
+        this.formula = formulaData.filter(item => item.name.match(search))
+      } else {
+        this.formula = formulaData
+      }
+    },
+    calculate(item) {
+      return item.product - item.cost
     }
   },
   computed: {

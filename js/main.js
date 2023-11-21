@@ -2,17 +2,234 @@
 const app = new Vue({
   el: "#app",
   vuetify: new Vuetify(),
-  data () {
+  data() {
     return {
       expand: true,
       formula: [],
       search: "",
+      // simulations: [
+      //  [ // section
+      //   { select: {}, build: 1 } // row
+      //  ]
+      // ],
       simulations: [
-       [ // section
-        { select: {}, build: 1 } // row
-       ]
+        [
+          {
+            "select": {
+              "id": "17",
+              "name": "自動化線路",
+              "product": [
+                {
+                  "name": "自動化線路",
+                  "amount": 2.5
+                }
+              ],
+              "cost": [
+                {
+                  "name": "定子",
+                  "amount": 2.5
+                },
+                {
+                  "name": "電纜",
+                  "amount": 50
+                }
+              ]
+            },
+            "build": 1
+          },
+          {
+            "select": {
+              "id": "20",
+              "name": "鋼筋混凝土",
+              "product": [
+                {
+                  "name": "鋼筋混凝土",
+                  "amount": 6
+                }
+              ],
+              "cost": [
+                {
+                  "name": "鋼樑",
+                  "amount": 24
+                },
+                {
+                  "name": "混凝土",
+                  "amount": 30
+                }
+              ]
+            },
+            "build": 1
+          },
+          {
+            "select": {
+              "id": "19",
+              "name": "馬達",
+              "product": [
+                {
+                  "name": "馬達",
+                  "amount": 5
+                }
+              ],
+              "cost": [
+                {
+                  "name": "轉子",
+                  "amount": 10
+                },
+                {
+                  "name": "定子",
+                  "amount": 10
+                }
+              ]
+            },
+            "build": 1
+          },
+          {
+            "select": {
+              "id": "16",
+              "name": "定子",
+              "product": [
+                {
+                  "name": "定子",
+                  "amount": 5
+                }
+              ],
+              "cost": [
+                {
+                  "name": "鋼管",
+                  "amount": 15
+                },
+                {
+                  "name": "銅線",
+                  "amount": 40
+                }
+              ]
+            },
+            "build": 3
+          },
+          {
+            "select": {
+              "id": "6-1",
+              "name": "轉子-2",
+              "product": [
+                {
+                  "name": "轉子",
+                  "amount": 5
+                }
+              ],
+              "cost": [
+                {
+                  "name": "鋼管",
+                  "amount": 10
+                },
+                {
+                  "name": "銅線",
+                  "amount": 30
+                }
+              ]
+            },
+            "build": 2
+          },
+          {
+            "select": {
+              "id": "18",
+              "name": "多功能骨架",
+              "product": [
+                {
+                  "name": "多功能骨架",
+                  "amount": 5
+                }
+              ],
+              "cost": [
+                {
+                  "name": "模型框架",
+                  "amount": 2.5
+                },
+                {
+                  "name": "鋼樑",
+                  "amount": 30
+                }
+              ]
+            },
+            "build": 1
+          },
+          {
+            "select": {
+              "id": "10",
+              "name": "鋼樑",
+              "product": [
+                {
+                  "name": "鋼樑",
+                  "amount": 15
+                }
+              ],
+              "cost": [
+                {
+                  "name": "鋼錠",
+                  "amount": 60
+                }
+              ]
+            },
+            "build": 4
+          },
+          {
+            "select": {
+              "id": "11",
+              "name": "鋼管",
+              "product": [
+                {
+                  "name": "鋼管",
+                  "amount": 20
+                }
+              ],
+              "cost": [
+                {
+                  "name": "鋼錠",
+                  "amount": 30
+                }
+              ]
+            },
+            "build": 4
+          },
+          {
+            "select": {
+              "id": "14",
+              "name": "電纜",
+              "product": [
+                {
+                  "name": "電纜",
+                  "amount": 30
+                }
+              ],
+              "cost": [
+                {
+                  "name": "銅線",
+                  "amount": 60
+                }
+              ]
+            },
+            "build": 2
+          },
+          {
+            "select": {
+              "id": "13",
+              "name": "銅線",
+              "product": [
+                {
+                  "name": "銅線",
+                  "amount": 30
+                }
+              ],
+              "cost": [
+                {
+                  "name": "銅錠",
+                  "amount": 15
+                }
+              ]
+            },
+            "build": 10
+          }
+        ]
       ],
-      test:{"鐵定": 1111, "銅錠": 222}
     }
   },
   methods: {
@@ -47,14 +264,13 @@ const app = new Vue({
     addRow(section) {
       section.push({ select: {}, build: 1 })
     },
-    removeRow(sectionIndex,  rowIndex) {
+    removeRow(sectionIndex, rowIndex) {
       this.simulations[sectionIndex].splice(rowIndex, 1)
-      // section.splice(index, 1)
     },
     addSection() {
       this.simulations.push([
-      { select: {}, build: 1 }
-     ])
+        { select: {}, build: 1 }
+      ])
     },
     getsimulationResult(section) {
       let obj = {}

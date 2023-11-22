@@ -221,4 +221,49 @@ const formulaData = [
       { name: "混凝土", amount: 30 }
     ]
   },
+  {
+    id: "21",
+    name: "塑膠",
+    product: [
+      { name: "塑膠", amount: 20 },
+      { name: "重油殘渣", amount: 10 }
+    ],
+    cost: [
+      { name: "原油", amount: 30 },
+    ]
+  },
+  {
+    id: "22",
+    name: "電路板",
+    product: [
+      { name: "電路板", amount: 7.5 }
+    ],
+    cost: [
+      { name: "塑膠", amount: 30 },
+      { name: "銅片", amount: 15 },
+    ]
+  },
+  {
+    id: "23",
+    name: "電腦",
+    product: [
+      { name: "電腦", amount: 2.5 }
+    ],
+    cost: [
+      { name: "塑膠", amount: 45 },
+      { name: "螺絲", amount: 130 },
+      { name: "電路板", amount: 25 },
+      { name: "電纜", amount: 22.5 },
+    ]
+  },
+  {
+    id: "24",
+    name: "油焦",
+    product: [
+      { name: "油焦", amount: 120 }
+    ],
+    cost: [
+      { name: "重油殘渣", amount: 40 },
+    ]
+  },
 ]

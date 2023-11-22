@@ -18,6 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/formula.js"></script>
+    <script src="./js/simulations.js"></script>
 
   </head>
 
@@ -134,21 +135,22 @@
                 <thead>
                   <tr>
                     <th></th>
-                    <th v-for="el, key in getsimulationResult(simulation)" :key="key" class="text-left">{{key}}</th>
+                    <th v-for="el, key in getsimulationResult(simulation)" :key="key" class="text-center">{{key}}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr >
                     <td>生產</td>
-                    <td v-for="el, key in getsimulationResult(simulation)" :key="`${key}-${1}`">{{el.product}}</td>
+                    <td class="text-center" v-for="el, key in getsimulationResult(simulation)" :key="`${key}-${1}`">{{el.product}}</td>
                   </tr>
                   <tr >
                     <td>消耗</td>
-                    <td v-for="el, key in getsimulationResult(simulation)" :key="`${key}-${2}`">{{el.cost}}</td>
+                    <td class="text-center" v-for="el, key in getsimulationResult(simulation)" :key="`${key}-${2}`">{{el.cost}}</td>
                   </tr>
                   <tr >
-                    <td>小記</td>
+                    <td>小計</td>
                     <td 
+                      class="text-center"
                       v-for="el, key in getsimulationResult(simulation)"
                       :key="`${key}-${3}`"
                       :class="{'font-weight-bold red--text': calculate(el) < 0}"

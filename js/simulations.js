@@ -333,7 +333,7 @@ const simulations = [
           }
         ]
       },
-      "build": 4
+      "build": 6
     },
     {
       "select": {
@@ -356,7 +356,7 @@ const simulations = [
           }
         ]
       },
-      "build": 3
+      "build": 4
     },
     {
       "select": {
@@ -379,7 +379,7 @@ const simulations = [
           }
         ]
       },
-      "build": 4
+      "build": 6
     },
     {
       "select": {
@@ -398,7 +398,7 @@ const simulations = [
           }
         ]
       },
-      "build": 18
+      "build": 24
     },
     {
       "select": {
@@ -417,7 +417,7 @@ const simulations = [
           }
         ]
       },
-      "build": 20
+      "build": 26
     },
     {
       "select": {
@@ -436,7 +436,7 @@ const simulations = [
           }
         ]
       },
-      "build": 6
+      "build": 10
     },
     {
       "select": {
@@ -459,7 +459,7 @@ const simulations = [
           }
         ]
       },
-      "build": 2
+      "build": 3
     }
   ]
 ]

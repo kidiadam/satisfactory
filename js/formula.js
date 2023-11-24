@@ -266,4 +266,42 @@ const formulaData = [
       { name: "重油殘渣", amount: 40 },
     ]
   },
+  {
+    id: "25",
+    name: "重型模型框架",
+    product: [
+      { name: "重型模型框架", amount: 2 }
+    ],
+    cost: [
+      { name: "模型框架", amount: 10 },
+      { name: "鋼管", amount: 30 },
+      { name: "鋼筋混凝土", amount: 10 },
+      { name: "螺絲", amount: 200 },
+    ]
+  },
+  {
+    id: "26",
+    name: "模型引擎",
+    product: [
+      { name: "模型引擎", amount: 1 }
+    ],
+    cost: [
+      { name: "馬達", amount: 2 },
+      { name: "橡膠", amount: 15 },
+      { name: "智能面板", amount: 2 },
+    ]
+  },
+  {
+    id: "27",
+    name: "自適應單元",
+    product: [
+      { name: "自適應單元", amount: 1 }
+    ],
+    cost: [
+      { name: "自動化線路", amount: 7.5 },
+      { name: "電路板", amount: 5 },
+      { name: "重型模型框架", amount: 1 },
+      { name: "電腦", amount: 1 },
+    ]
+  },
 ]

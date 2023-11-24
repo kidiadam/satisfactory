@@ -85,10 +85,11 @@ const app = new Vue({
     },
     searchFormula() {
       const { search } = this
+      const formula = JSON.parse(JSON.stringify(formulaData))
       if (search) {
-        this.formula = formulaData.filter(item => item.name.match(search))
+        this.formula = formula.filter(item => item.name.match(search))
       } else {
-        this.formula = formulaData
+        this.formula = formula
       }
     },
     calculate(item) {

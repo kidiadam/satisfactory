@@ -107,6 +107,17 @@ const formulaData = [
     ]
   },
   {
+    id: "9-1",
+    name: "鋼錠-2",
+    product: [
+      { name: "鋼錠", amount: 100 }
+    ],
+    cost: [
+      { name: "鐵礦", amount: 75 },
+      { name: "油焦", amount: 75 }
+    ]
+  },
+  {
     id: "10",
     name: "鋼樑",
     product: [
@@ -280,6 +291,19 @@ const formulaData = [
     ]
   },
   {
+    id: "25-1",
+    name: "重型模型框架-2",
+    product: [
+      { name: "重型模型框架", amount: 2.8 }
+    ],
+    cost: [
+      { name: "模型框架", amount: 7.5 },
+      { name: "鋼筋混凝土", amount: 9.4 },
+      { name: "鋼管", amount: 33.75 },
+      { name: "混凝土", amount: 21 },
+    ]
+  },
+  {
     id: "26",
     name: "模型引擎",
     product: [
@@ -302,6 +326,39 @@ const formulaData = [
       { name: "電路板", amount: 5 },
       { name: "重型模型框架", amount: 1 },
       { name: "電腦", amount: 1 },
+    ]
+  },
+  {
+    id: "28",
+    name: "燃油",
+    product: [
+      { name: "燃油", amount: 40 },
+      { name: "聚合樹脂", amount: 30 },
+    ],
+    cost: [
+      { name: "原油", amount: 60 },
+    ]
+  },
+  {
+    id: "29",
+    name: "渦輪燃油",
+    product: [
+      { name: "渦輪燃油", amount: 18.75 },
+    ],
+    cost: [
+      { name: "燃油", amount: 22.5 },
+      { name: "混合炭", amount: 15 },
+    ]
+  },
+  {
+    id: "30",
+    name: "混合炭",
+    product: [
+      { name: "混合炭", amount: 25 },
+    ],
+    cost: [
+      { name: "煤炭", amount: 25 },
+      { name: "硫磺", amount: 25 },
     ]
   },
 ]

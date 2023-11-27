@@ -93,7 +93,7 @@ const app = new Vue({
       }
     },
     calculate(item) {
-      return item.product - item.cost
+      return ((item.product * 100) - (item.cost * 100)) / 100
     }
   },
   computed: {

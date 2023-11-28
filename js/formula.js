@@ -361,4 +361,58 @@ const formulaData = [
       { name: "硫磺", amount: 25 },
     ]
   },
+  {
+    id: "31",
+    name: "氧化鋁溶液",
+    product: [
+      { name: "氧化鋁溶液", amount: 120 },
+      { name: "石英砂", amount: 50 },
+    ],
+    cost: [
+      { name: "鋁土礦", amount: 120 },
+    ]
+  },
+  {
+    id: "32",
+    name: "鋁碎塊",
+    product: [
+      { name: "鋁碎塊", amount: 360 },
+    ],
+    cost: [
+      { name: "氧化鋁溶液", amount: 240 },
+      { name: "煤炭", amount: 120 },
+    ]
+  },
+  {
+    id: "33",
+    name: "鋁錠",
+    product: [
+      { name: "鋁錠", amount: 60 },
+    ],
+    cost: [
+      { name: "鋁碎塊", amount: 90 },
+      { name: "石英砂", amount: 75 },
+    ]
+  },
+  {
+    id: "34",
+    name: "鋁製外殼",
+    product: [
+      { name: "鋁製外殼", amount: 60 },
+    ],
+    cost: [
+      { name: "鋁錠", amount: 90 },
+    ]
+  },
+  {
+    id: "35",
+    name: "鍍鋁板",
+    product: [
+      { name: "鍍鋁板", amount: 30 },
+    ],
+    cost: [
+      { name: "鋁錠", amount: 30 },
+      { name: "銅錠", amount: 10 },
+    ]
+  },
 ]

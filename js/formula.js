@@ -415,4 +415,26 @@ const formulaData = [
       { name: "銅錠", amount: 10 },
     ]
   },
+  {
+    id: "36",
+    name: "電池",
+    product: [
+      { name: "電池", amount: 20 },
+    ],
+    cost: [
+      { name: "硫酸", amount: 50 },
+      { name: "氧化鋁溶液", amount: 40 },
+      { name: "鋁製外殼", amount: 20 },
+    ]
+  },
+  {
+    id: "37",
+    name: "硫酸",
+    product: [
+      { name: "硫酸", amount: 50 },
+    ],
+    cost: [
+      { name: "硫磺", amount: 50 },
+    ]
+  },
 ]

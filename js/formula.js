@@ -52,6 +52,17 @@ const formulaData = [
     ]
   },
   {
+    id: "5-1",
+    name: "強化鐵板-2",
+    product: [
+      { name: "強化鐵板", amount: 15 }
+    ],
+    cost: [
+      { name: "鐵板", amount: 90 },
+      { name: "螺絲", amount: 250 }
+    ]
+  },
+  {
     id: "6",
     name: "轉子",
     product: [
@@ -255,6 +266,17 @@ const formulaData = [
     ]
   },
   {
+    id: "22-1",
+    name: "電路板",
+    product: [
+      { name: "電路板", amount: 5 }
+    ],
+    cost: [
+      { name: "橡膠", amount: 30 },
+      { name: "油焦", amount: 45 },
+    ]
+  },
+  {
     id: "23",
     name: "電腦",
     product: [
@@ -301,6 +323,19 @@ const formulaData = [
       { name: "鋼筋混凝土", amount: 9.4 },
       { name: "鋼管", amount: 33.75 },
       { name: "混凝土", amount: 21 },
+    ]
+  },
+  {
+    id: "25-2",
+    name: "重型模型框架-3",
+    product: [
+      { name: "重型模型框架", amount: 3.75 }
+    ],
+    cost: [
+      { name: "模型框架", amount: 18.75 },
+      { name: "鋼筋混凝土", amount: 11.25 },
+      { name: "橡膠", amount: 75 },
+      { name: "螺絲", amount: 390 },
     ]
   },
   {
@@ -435,6 +470,89 @@ const formulaData = [
     ],
     cost: [
       { name: "硫磺", amount: 50 },
+    ]
+  },
+  {
+    id: "38",
+    name: "超級電腦",
+    product: [
+      { name: "超級電腦", amount: 3 },
+    ],
+    cost: [
+      { name: "無線控制單元", amount: 9 },
+      { name: "冷卻系統", amount: 9 },
+    ]
+  },
+  {
+    id: "39",
+    name: "電磁控制棒",
+    product: [
+      { name: "電磁控制棒", amount: 4 },
+    ],
+    cost: [
+      { name: "定子", amount: 6 },
+      { name: "AI限制器", amount: 4 },
+    ]
+  },
+  {
+    id: "40",
+    name: "高速連接器",
+    product: [
+      { name: "高速連接器", amount: 3.75 },
+    ],
+    cost: [
+      { name: "快導線", amount: 210 },
+      { name: "電纜", amount: 37.5 },
+      { name: "電路板", amount: 3.75 },
+    ]
+  },
+  {
+    id: "40-1",
+    name: "高速連接器-2",
+    product: [
+      { name: "高速連接器", amount: 3 },
+    ],
+    cost: [
+      { name: "快導線", amount: 90 },
+      { name: "石英砂", amount: 37.5 },
+      { name: "電路板", amount: 3 },
+    ]
+  },
+  {
+    id: "41",
+    name: "無線控制單元",
+    product: [
+      { name: "無線控制單元", amount: 4.5 },
+    ],
+    cost: [
+      { name: "石英震盪器", amount: 1.5 },
+      { name: "鋁製外殼", amount: 90 },
+      { name: "電路板", amount: 15},
+      { name: "橡膠", amount: 45},
+    ]
+  },
+  {
+    id: "42",
+    name: "石英震盪器",
+    product: [
+      { name: "石英震盪器", amount: 1 },
+    ],
+    cost: [
+      { name: "石英晶體", amount: 18 },
+      { name: "電纜", amount: 14 },
+      { name: "強化鐵板", amount: 2.5},
+    ]
+  },
+  {
+    id: "43",
+    name: "磁場產生器",
+    product: [
+      { name: "磁場產生器", amount: 1 },
+    ],
+    cost: [
+      { name: "多功能骨架", amount: 2.5 },
+      { name: "電磁控制棒", amount: 1 },
+      { name: "電池", amount: 5},
     ]
   },
 ]

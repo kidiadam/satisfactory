@@ -522,6 +522,18 @@ const formulaData = [
     id: "41",
     name: "無線控制單元",
     product: [
+      { name: "無線控制單元", amount: 2.5 },
+    ],
+    cost: [
+      { name: "石英震盪器", amount: 1.25 },
+      { name: "鋁製外殼", amount: 40 },
+      { name: "電腦", amount: 1.25},
+    ]
+  },
+  {
+    id: "41-1",
+    name: "無線控制單元-2",
+    product: [
       { name: "無線控制單元", amount: 4.5 },
     ],
     cost: [
@@ -553,6 +565,42 @@ const formulaData = [
       { name: "多功能骨架", amount: 2.5 },
       { name: "電磁控制棒", amount: 1 },
       { name: "電池", amount: 5},
+    ]
+  },
+  {
+    id: "44",
+    name: "渦輪馬達",
+    product: [
+      { name: "渦輪馬達", amount: 1.88 },
+    ],
+    cost: [
+      { name: "冷卻系統", amount: 7.5 },
+      { name: "無線控制單元", amount: 3.75 },
+      { name: "馬達", amount: 7.5 },
+      { name: "橡膠", amount: 45 },
+    ]
+  },
+  {
+    id: "45",
+    name: "冷卻系統",
+    product: [
+      { name: "冷卻系統", amount: 6 },
+    ],
+    cost: [
+      { name: "散熱器", amount: 12 },
+      { name: "橡膠", amount: 12 },
+      { name: "氮氣", amount: 150 },
+    ]
+  },
+  {
+    id: "46",
+    name: "散熱器",
+    product: [
+      { name: "散熱器", amount: 7.5 },
+    ],
+    cost: [
+      { name: "鍍鋁板", amount: 37.5 },
+      { name: "銅片", amount: 22.5 },
     ]
   },
 ]

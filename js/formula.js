@@ -463,6 +463,19 @@ const formulaData = [
     ]
   },
   {
+    id: "36-1",
+    name: "電池-2",
+    product: [
+      { name: "電池", amount: 30 },
+    ],
+    cost: [
+      { name: "硫磺", amount: 45 },
+      { name: "鍍鋁板", amount: 52.5 },
+      { name: "塑膠", amount: 60 },
+      { name: "電線", amount: 90 },
+    ]
+  },
+  {
     id: "37",
     name: "硫酸",
     product: [
@@ -601,6 +614,18 @@ const formulaData = [
     cost: [
       { name: "鍍鋁板", amount: 37.5 },
       { name: "銅片", amount: 22.5 },
+    ]
+  },
+  {
+    id: "47",
+    name: "熔合模型框架",
+    product: [
+      { name: "熔合模型框架", amount: 1.5 }
+    ],
+    cost: [
+      { name: "重型模型框架", amount: 1.5 },
+      { name: "鋁製外殼", amount: 50 },
+      { name: "氮氣", amount: 37.5 },
     ]
   },
 ]

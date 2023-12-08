@@ -56,7 +56,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="item, idx in formula" :key="item.idx">
+                  <tr v-for="item, idx in formulas" :key="item.idx">
                     <td>
                       <span v-for="pro, proInd in item.product" :key="pro.name" v-text="pro.name+(proInd<pro.length-1? '、' : '')"></span>
                     </td>
@@ -104,21 +104,34 @@
                   <tr v-for="row, idx in simulation" :key="`${index}-${idx}`">
                     <td><v-icon v-if="simulation.length > 1" style="cursor: pointer;" @click="removeRow(index, idx)" large>mdi-minus-circle-outline</v-icon></td>
                     <td>
-                      <v-select
-                        v-model="row.select"
-                        :items="formulaData"
-                        item-text="name"
-                        item-value="id"
-                        label="Select"
-                        persistent-hint
-                        return-object
-                        single-line
-                      ></v-select>
+                      <div class="d-flex">
+                        <v-select
+                          v-model="row.label"
+                          :items="['初級', '中級', '高級', '特級']"
+                          label="級別"
+                          persistent-hint
+                          single-line
+                          style="width: 60px;"
+                          class="mr-2"
+                        ></v-select>
+                        <v-select
+                          v-model="row.select"
+                          :disabled="!row.label"
+                          :items="formulaData[row.label] || []"
+                          item-text="name"
+                          item-value="id"
+                          label="產品"
+                          persistent-hint
+                          return-object
+                          single-line
+                          style="width: 100px;"
+                        ></v-select>
+                      </div>
                     </td>
                     <td>
                       <v-text-field
                         v-model.number="row.build"
-                        label="建造數量"
+                        style="width: 40px"
                       ></v-text-field>
                     </td>
                     <td v-text="getProduct(row)"></td>

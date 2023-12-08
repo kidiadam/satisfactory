@@ -5,11 +5,13 @@ const app = new Vue({
   data() {
     return {
       expand: false,
-      formula: [],
+      formula: {},
+      allFormula: [], // 全部配方
+      formulas: [],// 顯示的配方
       search: "",
       simulations: [
        [ // section
-        { select: {}, build: 1 } // row
+        { label: "", select: {}, build: 1 } // row
        ]
       ],
     }
@@ -84,12 +86,12 @@ const app = new Vue({
       return obj
     },
     searchFormula() {
-      const { search } = this
-      const formula = JSON.parse(JSON.stringify(formulaData))
+      const { search, allFormula } = this
+      const formulas = JSON.parse(JSON.stringify(allFormula))
       if (search) {
-        this.formula = formula.filter(item => item.name.match(search))
+        this.formulas = formulas.filter(item => item.name.match(search))
       } else {
-        this.formula = formula
+        this.formulas = formulas
       }
     },
     calculate(item) {
@@ -101,6 +103,8 @@ const app = new Vue({
   },
   created() {
     this.formula = formulaData
-    this.simulations = simulations
+    this.allFormula = [...formulaData['初級'], ...formulaData['中級'], ...formulaData['高級'], ...formulaData['特級']]
+    this.formulas = this.allFormula
+    // this.simulations = simulations
   },
 })

@@ -23,7 +23,7 @@ const app = new Vue({
         const { build } = row
         let str = ""
         product.forEach((el, ind, arr) => {
-          str += `${el.name}：${el.amount * build}`
+          str += `${el.name}：${(el.amount * 100 * build) / 100}`
           if (ind < arr.length - 1) str += "、"
         })
         return str
@@ -37,7 +37,7 @@ const app = new Vue({
         const { build } = row
         let str = ""
         cost.forEach((el, ind, arr) => {
-          str += `${el.name}：${el.amount * build}`
+          str += `${el.name}：${(el.amount * 100 * build) / 100}`
           if (ind < arr.length - 1) str += "、"
         })
         return str
@@ -64,7 +64,7 @@ const app = new Vue({
         const { product, cost } = select
         if (product) {
           product.forEach(pro => {
-            const amount = pro.amount * build
+            const amount = (pro.amount * 100 * build) / 100
             if (obj[pro.name]) {
               obj[pro.name].product += amount
             } else {
@@ -74,7 +74,7 @@ const app = new Vue({
         }
         if (cost) {
           cost.forEach(cos => {
-            const amount = cos.amount * build
+            const amount = (cos.amount * 100 * build) / 100
             if (obj[cos.name]) {
               obj[cos.name].cost += amount
             } else {
@@ -105,6 +105,6 @@ const app = new Vue({
     this.formula = formulaData
     this.allFormula = [...formulaData['初級'], ...formulaData['中級'], ...formulaData['高級'], ...formulaData['特級']]
     this.formulas = this.allFormula
-    // this.simulations = simulations
+    this.simulations = simulations
   },
 })

@@ -73,6 +73,17 @@ const formulaData = {
       ]
     },
     {
+      id: "a-5-2",
+      name: "鋼錠-3",
+      product: [
+        { name: "鋼錠", amount: 60 }
+      ],
+      cost: [
+        { name: "鐵錠", amount: 40 },
+        { name: "煤炭", amount: 40 }
+      ]
+    },
+    {
       id: "a-6",
       name: "鋼樑",
       product: [
@@ -318,6 +329,17 @@ const formulaData = {
       cost: [
         { name: "鐵棒", amount: 12 },
         { name: "強化鐵板", amount: 3 }
+      ]
+    },
+    {
+      id: "b-4-1",
+      name: "模型框架-2",
+      product: [
+        { name: "模型框架", amount: 5 }
+      ],
+      cost: [
+        { name: "螺絲", amount: 140 },
+        { name: "強化鐵板", amount: 7.5 }
       ]
     },
     {

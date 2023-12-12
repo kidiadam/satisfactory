@@ -23,7 +23,7 @@ const app = new Vue({
         const { build } = row
         let str = ""
         product.forEach((el, ind, arr) => {
-          str += `${el.name}：${(el.amount * 100 * build) / 100}`
+          str += `${el.name}：${Number((el.amount * build).toFixed(2))}`
           if (ind < arr.length - 1) str += "、"
         })
         return str
@@ -37,7 +37,7 @@ const app = new Vue({
         const { build } = row
         let str = ""
         cost.forEach((el, ind, arr) => {
-          str += `${el.name}：${(el.amount * 100 * build) / 100}`
+          str += `${el.name}：${Number((el.amount * build).toFixed(2))}`
           if (ind < arr.length - 1) str += "、"
         })
         return str
@@ -64,9 +64,10 @@ const app = new Vue({
         const { product, cost } = select
         if (product) {
           product.forEach(pro => {
-            const amount = (pro.amount * 100 * build) / 100
+            const amount = Number((pro.amount * build).toFixed(2))
             if (obj[pro.name]) {
               obj[pro.name].product += amount
+              obj[pro.name].product = Number((obj[pro.name].product).toFixed(2))
             } else {
               obj[pro.name] = { product: amount, cost: 0 }
             }
@@ -74,9 +75,11 @@ const app = new Vue({
         }
         if (cost) {
           cost.forEach(cos => {
-            const amount = (cos.amount * 100 * build) / 100
+            const amount = Number((cos.amount * build).toFixed(2))
             if (obj[cos.name]) {
               obj[cos.name].cost += amount
+              obj[cos.name].cost = Number((obj[cos.name].cost).toFixed(2))
+
             } else {
               obj[cos.name] = { product: 0, cost: amount }
             }
@@ -95,7 +98,11 @@ const app = new Vue({
       }
     },
     calculate(item) {
-      return ((item.product * 100) - (item.cost * 100)) / 100
+      return Number((item.product - item.cost).toFixed(2))
+    },
+    toggleTable(idx) {
+      const display = this.$refs[`simulation${idx}`][0].style.display;
+      this.$refs[`simulation${idx}`][0].style.display = display == "none"? "block" : "none"
     }
   },
   computed: {

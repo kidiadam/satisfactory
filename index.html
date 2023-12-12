@@ -78,70 +78,72 @@
         </h1>
         <div class="simulations" style="padding-bottom: 100px;">
           <div style="margin-bottom: 60px;" class="mySection"  v-for="simulation, index in simulations" :key="index">
-            <h2>模擬建造-{{index+1}}</h2>
-            <v-simple-table fixed-header>
-              <template v-slot:default>
-                <thead>
-                  <tr>
-                    <th class="text-left">
-                      編輯
-                    </th>
-                    <th class="text-left">
-                      產品
-                    </th>
-                    <th class="text-left">
-                      建造數量
-                    </th>
-                    <th class="text-left">
-                      生產數量
-                    </th>
-                    <th class="text-left">
-                      消耗材料
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="row, idx in simulation" :key="`${index}-${idx}`">
-                    <td><v-icon v-if="simulation.length > 1" style="cursor: pointer;" @click="removeRow(index, idx)" large>mdi-minus-circle-outline</v-icon></td>
-                    <td>
-                      <div class="d-flex">
-                        <v-select
-                          v-model="row.label"
-                          :items="['初級', '中級', '高級', '特級']"
-                          label="級別"
-                          persistent-hint
-                          single-line
-                          style="width: 60px;"
-                          class="mr-2"
-                        ></v-select>
-                        <v-select
-                          v-model="row.select"
-                          :disabled="!row.label"
-                          :items="formulaData[row.label] || []"
-                          item-text="name"
-                          item-value="id"
-                          label="產品"
-                          persistent-hint
-                          return-object
-                          single-line
-                          style="width: 100px;"
-                        ></v-select>
-                      </div>
-                    </td>
-                    <td>
-                      <v-text-field
-                        v-model.number="row.build"
-                        style="width: 40px"
-                      ></v-text-field>
-                    </td>
-                    <td v-text="getProduct(row)"></td>
-                    <td v-text="getCost(row)"></td>
-                  </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-            <div class="text-center">
-              <v-icon style="cursor: pointer;" @click="addRow(simulation)" large>mdi-plus-circle-outline</v-icon>
+            <h2>模擬建造-{{index+1}}<v-icon style="cursor: pointer;" class="ml-2" @click="toggleTable(index)" large>mdi-view-list</v-icon></h2>
+            <div :ref="`simulation${index}`">
+              <v-simple-table fixed-header>
+                <template v-slot:default>
+                  <thead>
+                    <tr>
+                      <th class="text-left">
+                        編輯
+                      </th>
+                      <th class="text-left">
+                        產品
+                      </th>
+                      <th class="text-left">
+                        建造數量
+                      </th>
+                      <th class="text-left">
+                        生產數量
+                      </th>
+                      <th class="text-left">
+                        消耗材料
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="row, idx in simulation" :key="`${index}-${idx}`">
+                      <td><v-icon v-if="simulation.length > 1" style="cursor: pointer;" @click="removeRow(index, idx)" large>mdi-minus-circle-outline</v-icon></td>
+                      <td>
+                        <div class="d-flex">
+                          <v-select
+                            v-model="row.label"
+                            :items="['初級', '中級', '高級', '特級']"
+                            label="級別"
+                            persistent-hint
+                            single-line
+                            style="width: 60px;"
+                            class="mr-2"
+                          ></v-select>
+                          <v-select
+                            v-model="row.select"
+                            :disabled="!row.label"
+                            :items="formulaData[row.label] || []"
+                            item-text="name"
+                            item-value="id"
+                            label="產品"
+                            persistent-hint
+                            return-object
+                            single-line
+                            style="width: 100px;"
+                          ></v-select>
+                        </div>
+                      </td>
+                      <td>
+                        <v-text-field
+                          v-model.number="row.build"
+                          style="width: 40px"
+                        ></v-text-field>
+                      </td>
+                      <td v-text="getProduct(row)"></td>
+                      <td v-text="getCost(row)"></td>
+                    </tr>
+                  </tbody>
+                </template>
+              </v-simple-table>
+              <div class="text-center">
+                <v-icon style="cursor: pointer;" @click="addRow(simulation)" large>mdi-plus-circle-outline</v-icon>
+              </div>
             </div>
             <v-simple-table>
               <template v-slot:default>

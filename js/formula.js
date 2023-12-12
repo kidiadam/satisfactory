@@ -155,6 +155,17 @@ const formulaData = {
       ]
     },
     {
+      id: "a-12-1",
+      name: "塑膠-2",
+      product: [
+        { name: "塑膠", amount: 20 },
+      ],
+      cost: [
+        { name: "聚合樹脂", amount: 60 },
+        { name: "水", amount: 20 },
+      ]
+    },
+    {
       id: "a-13",
       name: "橡膠",
       product: [
@@ -163,6 +174,17 @@ const formulaData = {
       ],
       cost: [
         { name: "原油", amount: 30 },
+      ]
+    },
+    {
+      id: "a-13-1",
+      name: "橡膠-2",
+      product: [
+        { name: "橡膠", amount: 20 },
+      ],
+      cost: [
+        { name: "聚合樹脂", amount: 40 },
+        { name: "水", amount: 40 },
       ]
     },
     {
@@ -228,6 +250,18 @@ const formulaData = {
       ],
       cost: [
         { name: "鋁土礦", amount: 120 },
+        { name: "水", amount: 180 },
+      ]
+    },
+    {
+      id: "a-18-1",
+      name: "氧化鋁溶液-2",
+      product: [
+        { name: "氧化鋁溶液", amount: 240 },
+      ],
+      cost: [
+        { name: "鋁土礦", amount: 200 },
+        { name: "水", amount: 200 },
       ]
     },
     {
@@ -242,6 +276,18 @@ const formulaData = {
       ]
     },
     {
+      id: "a-19-1",
+      name: "鋁碎塊-2",
+      product: [
+        { name: "鋁碎塊", amount: 300 },
+        { name: "水", amount: 105 },
+      ],
+      cost: [
+        { name: "氧化鋁溶液", amount: 180 },
+        { name: "油焦", amount: 60 },
+      ]
+    },
+    {
       id: "a-20",
       name: "鋁錠",
       product: [
@@ -250,6 +296,16 @@ const formulaData = {
       cost: [
         { name: "鋁碎塊", amount: 90 },
         { name: "石英砂", amount: 75 },
+      ]
+    },
+    {
+      id: "a-20-1",
+      name: "鋁錠-2",
+      product: [
+        { name: "鋁錠", amount: 30 },
+      ],
+      cost: [
+        { name: "鋁碎塊", amount: 60 },
       ]
     },
     {
@@ -409,6 +465,19 @@ const formulaData = {
       ]
     },
     {
+      id: "b-8-2",
+      name: "渦輪燃油-3",
+      product: [
+        { name: "渦輪燃油", amount: 45 },
+      ],
+      cost: [
+        { name: "重油殘渣", amount: 30 },
+        { name: "燃油", amount: 15 },
+        { name: "硫磺", amount: 22.5 },
+        { name: "油焦", amount: 22.5 },
+      ]
+    },
+    {
       id: "b-9",
       name: "鋁製外殼",
       product: [
@@ -416,6 +485,17 @@ const formulaData = {
       ],
       cost: [
         { name: "鋁錠", amount: 90 },
+      ]
+    },
+    {
+      id: "b-9-11",
+      name: "鋁製外殼-2",
+      product: [
+        { name: "鋁製外殼", amount: 112.5 },
+      ],
+      cost: [
+        { name: "鋁錠", amount: 150 },
+        { name: "銅錠", amount: 75 },
       ]
     },
     {
@@ -451,7 +531,7 @@ const formulaData = {
         { name: "硫磺", amount: 45 },
         { name: "鍍鋁板", amount: 52.5 },
         { name: "塑膠", amount: 60 },
-        { name: "電線", amount: 90 },
+        { name: "銅線", amount: 90 },
       ]
     },
     {
@@ -463,6 +543,28 @@ const formulaData = {
       cost: [
         { name: "鍍鋁板", amount: 37.5 },
         { name: "銅片", amount: 22.5 },
+      ]
+    },
+    {
+      id: "b-12-1",
+      name: "散熱器-2",
+      product: [
+        { name: "散熱器", amount: 10 },
+      ],
+      cost: [
+        { name: "鋁製外殼", amount: 30 },
+        { name: "橡膠", amount: 30 },
+      ]
+    },
+    {
+      id: "b-13",
+      name: "AI限制器",
+      product: [
+        { name: "AI限制器", amount: 5 },
+      ],
+      cost: [
+        { name: "快導線", amount: 100 },
+        { name: "銅片", amount: 25 },
       ]
     },
   ],
@@ -511,6 +613,17 @@ const formulaData = {
         { name: "螺絲", amount: 130 },
         { name: "電路板", amount: 25 },
         { name: "電纜", amount: 22.5 },
+      ]
+    },
+    {
+      id: "c-4-1",
+      name: "電腦-2",
+      product: [
+        { name: "電腦", amount: 2.8 }
+      ],
+      cost: [
+        { name: "電路板", amount: 7.5 },
+        { name: "石英震盪器", amount: 2.8 },
       ]
     },
     {
@@ -686,6 +799,19 @@ const formulaData = {
       ]
     },
     {
+      id: "c-14-1",
+      name: "渦輪馬達-2",
+      product: [
+        { name: "渦輪馬達", amount: 3.75 },
+      ],
+      cost: [
+        { name: "壓力轉換方塊", amount: 1.88 },
+        { name: "定子", amount: 15 },
+        { name: "馬達", amount: 7.5 },
+        { name: "瓶裝氮氣", amount: 45 },
+      ]
+    },
+    {
       id: "c-15",
       name: "冷卻系統",
       product: [
@@ -698,6 +824,18 @@ const formulaData = {
       ]
     },
     {
+      id: "c-15-1",
+      name: "冷卻系統-2",
+      product: [
+        { name: "冷卻系統", amount: 3.75 },
+      ],
+      cost: [
+        { name: "散熱器", amount: 9.38 },
+        { name: "馬達", amount: 1.88 },
+        { name: "氮氣", amount: 45 },
+      ]
+    },
+    {
       id: "c-16",
       name: "熔合模型框架",
       product: [
@@ -707,6 +845,17 @@ const formulaData = {
         { name: "重型模型框架", amount: 1.5 },
         { name: "鋁製外殼", amount: 50 },
         { name: "氮氣", amount: 37.5 },
+      ]
+    },
+    {
+      id: "c-17",
+      name: "壓力轉換方塊",
+      product: [
+        { name: "壓力轉換方塊", amount: 1 }
+      ],
+      cost: [
+        { name: "熔合模型框架", amount: 1 },
+        { name: "無線控制單元", amount: 2 },
       ]
     },
 

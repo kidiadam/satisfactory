@@ -372,30 +372,26 @@ const simulations = [
   [
     {
       "select": {
-        "id": "a-18",
-        "name": "氧化鋁溶液",
+        "id": "a-18-1",
+        "name": "氧化鋁溶液-2",
         "product": [
           {
             "name": "氧化鋁溶液",
-            "amount": 120
-          },
-          {
-            "name": "石英砂",
-            "amount": 50
+            "amount": 240
           }
         ],
         "cost": [
           {
             "name": "鋁土礦",
-            "amount": 120
+            "amount": 200
           },
           {
             "name": "水",
-            "amount": 180
+            "amount": 200
           }
         ]
       },
-      "build": 8,
+      "build": 6,
       "label": "初級"
     },
     {
@@ -423,7 +419,7 @@ const simulations = [
           }
         ]
       },
-      "build": 5,
+      "build": 8,
       "label": "初級"
     },
     {
@@ -443,31 +439,7 @@ const simulations = [
           }
         ]
       },
-      "build": 7,
-      "label": "初級"
-    },
-    {
-      "select": {
-        "id": "a-20",
-        "name": "鋁錠",
-        "product": [
-          {
-            "name": "鋁錠",
-            "amount": 60
-          }
-        ],
-        "cost": [
-          {
-            "name": "鋁碎塊",
-            "amount": 90
-          },
-          {
-            "name": "石英砂",
-            "amount": 75
-          }
-        ]
-      },
-      "build": 12,
+      "build": 40,
       "label": "初級"
     },
     {
@@ -487,7 +459,7 @@ const simulations = [
           }
         ]
       },
-      "build": 8,
+      "build": 10,
       "label": "中級"
     },
     {
@@ -511,7 +483,7 @@ const simulations = [
           }
         ]
       },
-      "build": 8,
+      "build": 10,
       "label": "中級"
     }
   ],
@@ -545,7 +517,7 @@ const simulations = [
           }
         ]
       },
-      "build": 36,
+      "build": 40,
       "label": "中級"
     },
     {
@@ -569,7 +541,7 @@ const simulations = [
           }
         ]
       },
-      "build": 40,
+      "build": 60,
       "label": "初級"
     },
     {
@@ -589,7 +561,7 @@ const simulations = [
           }
         ]
       },
-      "build": 10,
+      "build": 12,
       "label": "初級"
     },
     {
@@ -613,7 +585,7 @@ const simulations = [
           }
         ]
       },
-      "build": 6,
+      "build": 14,
       "label": "初級"
     },
     {
@@ -637,31 +609,31 @@ const simulations = [
           }
         ]
       },
-      "build": 20,
+      "build": 30,
       "label": "初級"
     },
     {
       "select": {
-        "id": "a-12",
-        "name": "塑膠",
+        "id": "a-12-2",
+        "name": "塑膠-3",
         "product": [
           {
             "name": "塑膠",
-            "amount": 20
-          },
-          {
-            "name": "重油殘渣",
-            "amount": 10
+            "amount": 60
           }
         ],
         "cost": [
           {
-            "name": "原油",
+            "name": "橡膠",
+            "amount": 30
+          },
+          {
+            "name": "燃油",
             "amount": 30
           }
         ]
       },
-      "build": 20,
+      "build": 7,
       "label": "初級"
     }
   ],
@@ -1020,30 +992,30 @@ const simulations = [
     },
     {
       "select": {
-        "id": "c-10",
-        "name": "高速連接器",
+        "id": "c-10-1",
+        "name": "高速連接器-2",
         "product": [
           {
             "name": "高速連接器",
-            "amount": 3.75
+            "amount": 3
           }
         ],
         "cost": [
           {
             "name": "快導線",
-            "amount": 210
+            "amount": 90
           },
           {
-            "name": "電纜",
+            "name": "石英砂",
             "amount": 37.5
           },
           {
             "name": "電路板",
-            "amount": 3.75
+            "amount": 3
           }
         ]
       },
-      "build": 1,
+      "build": 2,
       "label": "高級"
     }
   ],
@@ -1285,7 +1257,7 @@ const simulations = [
           }
         ]
       },
-      "build": 13,
+      "build": 14,
       "label": "初級"
     },
     {
@@ -1305,27 +1277,27 @@ const simulations = [
           }
         ]
       },
-      "build": 14,
+      "build": 15,
       "label": "初級"
     },
     {
       "select": {
-        "id": "a-3",
-        "name": "鐵棒",
+        "id": "a-3-1",
+        "name": "鐵棒-2",
         "product": [
           {
             "name": "鐵棒",
-            "amount": 15
+            "amount": 48
           }
         ],
         "cost": [
           {
-            "name": "鐵錠",
-            "amount": 15
+            "name": "鋼錠",
+            "amount": 12
           }
         ]
       },
-      "build": 9,
+      "build": 3,
       "label": "初級"
     },
     {
@@ -1350,22 +1322,22 @@ const simulations = [
     },
     {
       "select": {
-        "id": "a-9",
-        "name": "銅線",
+        "id": "a-9-1",
+        "name": "銅線-2",
         "product": [
           {
             "name": "銅線",
-            "amount": 30
+            "amount": 120
           }
         ],
         "cost": [
           {
-            "name": "銅錠",
+            "name": "鎧錠",
             "amount": 15
           }
         ]
       },
-      "build": 33,
+      "build": 8,
       "label": "初級"
     },
     {
@@ -1385,7 +1357,7 @@ const simulations = [
           }
         ]
       },
-      "build": 5,
+      "build": 4,
       "label": "初級"
     },
     {
@@ -1406,6 +1378,66 @@ const simulations = [
         ]
       },
       "build": 15,
+      "label": "初級"
+    },
+    {
+      "select": {
+        "id": "a-1",
+        "name": "鐵錠",
+        "product": [
+          {
+            "name": "鐵錠",
+            "amount": 30
+          }
+        ],
+        "cost": [
+          {
+            "name": "鐵礦",
+            "amount": 30
+          }
+        ]
+      },
+      "build": 52,
+      "label": "初級"
+    },
+    {
+      "select": {
+        "id": "a-23",
+        "name": "快導線",
+        "product": [
+          {
+            "name": "快導線",
+            "amount": 60
+          }
+        ],
+        "cost": [
+          {
+            "name": "鎧錠",
+            "amount": 12
+          }
+        ]
+      },
+      "build": 7,
+      "label": "初級"
+    },
+    {
+      "select": {
+        "id": "a-22",
+        "name": "鎧錠",
+        "product": [
+          {
+            "name": "鎧錠",
+            "amount": 15
+          }
+        ],
+        "cost": [
+          {
+            "name": "鎧礦",
+            "amount": 45
+          }
+        ]
+      },
+      "build": 17,
       "label": "初級"
     }
   ]

@@ -31,6 +31,16 @@ const formulaData = {
       ]
     },
     {
+      id: "a-3-1",
+      name: "鐵棒-2",
+      product: [
+        { name: "鐵棒", amount: 48 }
+      ],
+      cost: [
+        { name: "鋼錠", amount: 12 }
+      ]
+    },
+    {
       id: "a-4",
       name: "螺絲",
       product: [
@@ -124,6 +134,16 @@ const formulaData = {
       ]
     },
     {
+      id: "a-9-1",
+      name: "銅線-2",
+      product: [
+        { name: "銅線", amount: 120 }
+      ],
+      cost: [
+        { name: "鎧錠", amount: 15 },
+      ]
+    },
+    {
       id: "a-10",
       name: "電纜",
       product: [
@@ -163,6 +183,17 @@ const formulaData = {
       cost: [
         { name: "聚合樹脂", amount: 60 },
         { name: "水", amount: 20 },
+      ]
+    },
+    {
+      id: "a-12-2",
+      name: "塑膠-3",
+      product: [
+        { name: "塑膠", amount: 60 },
+      ],
+      cost: [
+        { name: "橡膠", amount: 30 },
+        { name: "燃油", amount: 30 },
       ]
     },
     {
@@ -316,6 +347,37 @@ const formulaData = {
       ],
       cost: [
         { name: "硫磺", amount: 50 },
+      ]
+    },
+    {
+      id: "a-22",
+      name: "鎧錠",
+      product: [
+        { name: "鎧錠", amount: 15 },
+      ],
+      cost: [
+        { name: "鎧礦", amount: 45 },
+      ]
+    },
+    {
+      id: "a-22-1",
+      name: "鎧錠-2",
+      product: [
+        { name: "鎧錠", amount: 12 },
+      ],
+      cost: [
+        { name: "鎧礦", amount: 24 },
+        { name: "水", amount: 24 },
+      ]
+    },
+    {
+      id: "a-23",
+      name: "快導線",
+      product: [
+        { name: "快導線", amount: 60 },
+      ],
+      cost: [
+        { name: "鎧錠", amount: 12 },
       ]
     },
 
